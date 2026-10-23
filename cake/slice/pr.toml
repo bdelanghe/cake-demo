@@ -1,0 +1,26 @@
+# How cake cuts this wip commit into PRs. `files` is a jj fileset; `hunks` picks lines of a shared file.
+
+[[slice]]
+id    = "sponge"
+title = "sponge: the chocolate layer every cake starts from"
+files = 'src/sponge.rs | Cargo.lock'
+hunks = { "src/lib.rs" = 'added(content:"pub mod sponge")' }
+
+[[slice]]
+id    = "frosting"
+title = "frosting: pour ganache over a sponge"
+files = 'src/frosting.rs'
+hunks = { "src/lib.rs" = 'added(content:"pub mod frosting")' }
+after = "sponge"
+
+[[slice]]
+id    = "slice"
+title = "slice: cut a frosted cake, every crumb exactly once"
+files = 'src/slice.rs | tests/cake.rs'
+hunks = { "src/lib.rs" = 'added(content:"pub mod slice")' }
+after = "frosting"
+
+[[slice]]
+id    = "recipe"
+title = "docs: the recipe and this cut plan"
+files = 'docs/recipe.md | cake/slice/pr.toml'
