@@ -1,0 +1,6 @@
+[package]
+name = "bakery"
+version = "0.1.0"
+edition = "2021"
+description = "A toy crate for the cake demo: one wip commit, served as stacked PRs."
+license = "MIT OR Apache-2.0"
