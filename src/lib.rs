@@ -1,5 +1,6 @@
 //! bakery: a toy crate for the cake demo.
 
+pub mod frosting;
 pub mod sponge;
 
 /// Something you can bake.
