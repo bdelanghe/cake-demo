@@ -1,5 +1,9 @@
 //! bakery: a toy crate for the cake demo.
 
+pub mod frosting;
+pub mod slice;
+pub mod sponge;
+
 /// Something you can bake.
 pub trait Bake {
     /// Minutes in the oven.
